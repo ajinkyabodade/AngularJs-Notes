@@ -5,7 +5,7 @@ AngularJS is a JavaScript-based open-source front-end web application framework 
 
 ## How to understand and follow the notes:
 
- In this notes I mainly focused on the pratical aspects of AngularJs, And for the same I will suggest you to have a google along with you to clear your therotical doubts on the way.
+ In this notes I have mainly focused on the pratical aspects of AngularJs, And for the same I will suggest you to have a google along with you to clear your therotical doubts on the way.
 
  To learn AngularJs from this notes just follow the exercises given in the notes and try to implement them for better understanding
 
