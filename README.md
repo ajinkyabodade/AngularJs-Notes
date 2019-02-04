@@ -9,6 +9,7 @@ AngularJS is a JavaScript-based open-source front-end web application framework 
 
  To learn AngularJs from these notes just follow the exercises given in the notes and try to implement them for better understanding
 
+ You must practice the below Exercise otherwise you will not understand the AngularJs.
 
 ## Getting Started:
 
@@ -44,7 +45,7 @@ Inputting and Displaying the values
 </div>
 ```
 Try this yourself or see the implementation by running the index.html file provided by me. 
-
+ 
 
 ### Second Exercise:
 
