@@ -537,14 +537,14 @@ app.controller("myController",function($scope,webname){
 	$scope.name=ebname;
 	}); 
 ```
-//In this way you can access the constant service in view through controller
+In this way you can access the constant service in view through controller
 
 
 
---Service custom service in Angular Js:-
+-Service custom service in Angular Js:-
 By default the service has an this object which it returns where as in factory custom service you need to create and return the object
  
- for ex:-
+ for ex:
 ```
  app.service("myService",function(){
 	//var this={};
@@ -561,13 +561,14 @@ By default the service has an this object which it returns where as in factory c
 	$scope.name=myService.getname();
 	});
 ```
-//In view simply write {{name}}
+In view simply write {{name}}
 
-//In this way you can access the service in the view through controller
+In this way you can access the service in the view through controller
 
 
 
-###Inbuilt Services in AngularJs:-
+
+###Inbuilt Services in AngularJs:
 
 -Timeout Service:-
 
