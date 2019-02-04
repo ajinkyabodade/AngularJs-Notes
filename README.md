@@ -3,14 +3,14 @@
 AngularJS is a JavaScript-based open-source front-end web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.
 
 
-## How to understand and follow the notes
+## How to understand and follow the notes:
 
  In this notes I mainly focused on the pratical aspects of AngularJs, And for the same I will suggest you to have a google along with you to clear your therotical doubts on the way.
 
  To learn AngularJs from this notes just follow the exercises given in the notes and try to implement them for better understanding
 
 
-## Getting Started
+## Getting Started:
 
 1. Then create and link a js file which will include the Controller and Services for your angularJs app
 ```
@@ -21,7 +21,7 @@ AngularJS is a JavaScript-based open-source front-end web application framework 
 <body ng-app="myApp" ><!--Accessing App module in body tag-->
 ```
 
-### Prerequisites
+### Prerequisites:
 
  For getting started with the AngularJs firt you need to link the AngularJs CDN or offline file in your page:
 
@@ -31,7 +31,7 @@ AngularJS is a JavaScript-based open-source front-end web application framework 
 You can get the CDN link or file from https://angularjs.org/
 
 
-### First Exercise
+### First Exercise:
 
 Inputting and Displaying the values
 
@@ -44,7 +44,7 @@ Inputting and Displaying the values
 Try this yourself or see the implementation by running the index.html file provided by me. 
 
 
-### Second Exercise
+### Second Exercise:
 
 Fetching name from controller app.js myController Using $Scope
 
@@ -67,7 +67,7 @@ app.controller("myController",function($scope){
 Try this yourself or see the implementation by running the index.html file provided by me.(store app.js in the same location as index.html )
 
 
-### Third Exercise
+### Third Exercise:
 
 Using $rootScope to access variable from different controller's of app.js
 
@@ -104,7 +104,7 @@ app.controller("myController2",function($scope,$rootScope){
 ```
 
 
-### Fourth Exercise
+### Fourth Exercise:
 
 Initializing default variable values using ng-init
 
@@ -116,7 +116,7 @@ Write the follwing in index.html file:
 ```
 
 
-### Fifth Exercise
+### Fifth Exercise:
 
 Using ng-repeat to implement for loop in HTML
 
@@ -149,7 +149,7 @@ Write the follwing in index.html file:
 
 ```
 
-### Sixth Exercise
+### Sixth Exercise:
 
 Use ng-hide to hide any html context upon user action
 
@@ -163,7 +163,7 @@ Write the follwing in index.html file:
 ```
 
 
-### Seventh Exercise
+### Seventh Exercise:
 
 Use ng-show to show any html context upon user action
 
@@ -179,7 +179,7 @@ Write the follwing in index.html file:
 
 
 
-### Eight Exercise
+### Eight Exercise:
 
 Expressions in AngularJs
 
@@ -195,7 +195,7 @@ Write the follwing in index.html file:
 
 ```
 
-### Nineth Exercise
+### Nineth Exercise:
 
 Filters in AngularJs
 ```
@@ -298,7 +298,7 @@ Write the follwing in index.html file:
 
 ```
 
-### Data Binding In AngularJs
+### Data Binding In AngularJs:
 
 Data binding in angular JS is the synchronization between the model and view: 
 
@@ -309,7 +309,7 @@ Two types of Data binding:-
 -two way data binding -> any change in UI field updates the model and any change in model updates the UI field.	
 
 
-### Tenth Exercise
+### Tenth Exercise:
 
 One way data binding:
 ```
@@ -319,7 +319,7 @@ One way data binding:
 </div>
 ```
 
-### Eleventh Exercise
+### Eleventh Exercise:
 
 Two way data binding:
 ```
@@ -331,7 +331,7 @@ Two way data binding:
 ```
 
 
-### Twelth Exercise
+### Twelth Exercise:
 
 
 Creating Custom Directive in AngularJs:
@@ -363,7 +363,7 @@ Accesing Custom Directive of app.js in View::
 <!-- directive:my-first-directive -->
 ```
 
-### Thirteenth Exercise
+### Thirteenth Exercise:
 
 Creating Custom Filters in AngularJs:
 
@@ -400,7 +400,7 @@ app.controller("myController3",function($scope,$rootScope){
 }); 
 ```
 
-### 14th Exercise
+### 14th Exercise:
 
 Events in AngularJs:
 
@@ -465,7 +465,7 @@ app.controller("myController4",function($scope){
 }); 
 ```
 
-### Routing in AngularJs
+### Routing in AngularJs:
 
 Routing in AngularJs is used to show the different contents on same page without refresh/reloading the page.
 
@@ -501,15 +501,15 @@ To show the content in any div or elemnt in view:
 ```
 
 
-### Services in AngularJs
+### Services in AngularJs:
 
 In AngularJS, a service is a function, or object, that is available for, and limited to, your AngularJS application.
 
 AngularJS has about 30 built-in services, and we can create custom service also.
 
-### Custom services in Angularjs--
+### Custom services in Angularjs:
 
--Value Custom service in AngularJs:-
+-1.Value Custom service in AngularJs:-
 Write the following code in app.js:
 ```
 app.value("variable_name","Value");
@@ -525,7 +525,7 @@ In this way you can access the value service in view through controller
 
 
 
--Constant custom service in AngularJs:-
+-2.Constant custom service in AngularJs:-
  Write the following in app.js:
  ```
 app.constant("variable_name","Value");
@@ -541,7 +541,7 @@ In this way you can access the constant service in view through controller
 
 
 
--Service custom service in Angular Js:-
+-3.Service custom service in Angular Js:-
 By default the service has an this object which it returns where as in factory custom service you need to create and return the object
  
  for ex:
@@ -568,10 +568,10 @@ In this way you can access the service in the view through controller
 
 
 
-### Inbuilt services in Angularjs--
+### Inbuilt services in Angularjs:
 
 
--Timeout Service:-
+-1.Timeout Service:-
 
 Write the following in html:
 ```
@@ -592,7 +592,7 @@ app.controller("myController5",function($scope,$timeout){
 
 ```
 
--$http service:-
+-2.$http service:-
 
 
 $http is an AngularJS service for reading data from remote servers.
@@ -626,7 +626,7 @@ app.controller('myController', function($scope, $http) {
 
 ```
 
--Interval Service:-
+-3.Interval Service:-
 
 Write the following in html:
 ```
@@ -648,7 +648,7 @@ app.controller("myController6",function($scope,$interval){
 	}); 
 ```
 
--Log Service:- 
+-4.Log Service:- 
  Used to show message in console
  see controller7 in app.js for syntax
 ```
@@ -662,7 +662,7 @@ app.controller("myController7",function($log){
 	}); 
 ```
 
--location Service:
+-5.location Service:
 
 Write the following in html file:
 ```
@@ -687,7 +687,7 @@ app.controller("myController8",function($scope,$location){
 	}); 
 ```
 
-### 15th Exercise--
+### 15th Exercise:
 
 Form state in AngularJs
 
@@ -704,7 +704,7 @@ Write following in html file:
 Some other example are $touched $untouched $dirty etc.
 
 
-### 16th Exercise--
+### 16th Exercise:
 
 
 Form Validation Directive in AngularJs
@@ -741,7 +741,7 @@ input.ng-valid{
 ```
 
 
-### Referance links for understanding the AngularJs integration with Codeigniter/ Database:--
+### Referance links for understanding the AngularJs integration with Codeigniter/ Database:
 
 ```
 https://www.formget.com/angularjs-crud/
