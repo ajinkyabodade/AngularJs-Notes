@@ -561,7 +561,7 @@ By default the service has an this object which it returns where as in factory c
 	$scope.name=myService.getname();
 	});
 ```
-In view simply write {{name}}
+<!-- In view simply write {{name}} -->
 
 In this way you can access the service in the view through controller
 
