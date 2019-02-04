@@ -687,7 +687,8 @@ app.controller("myController8",function($scope,$location){
 	}); 
 ```
 
-###15th Exercise:
+### 15th Exercise--
+
 Form state in AngularJs
 
 Write following in html file:
@@ -703,7 +704,8 @@ Write following in html file:
 Some other example are $touched $untouched $dirty etc.
 
 
-###16th Exercise:
+### 16th Exercise--
+
 
 Form Validation Directive in AngularJs
 
@@ -739,8 +741,7 @@ input.ng-valid{
 ```
 
 
-
-###Referance links for understanding the AngularJs integration with Codeigniter/ Database:
+### Referance links for understanding the AngularJs integration with Codeigniter/ Database:--
 
 ```
 https://www.formget.com/angularjs-crud/
