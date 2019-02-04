@@ -12,14 +12,16 @@ AngularJS is a JavaScript-based open-source front-end web application framework 
 
 ## Getting Started:
 
-1. Then create and link a js file which will include the Controller and Services for your angularJs app
-```
-<script src="app.js"></script>
-```
-2. To start using AngularJs use ng-app="app_name" in your desired html tag.
+1. To start using AngularJs use ng-app="app_name" in your desired html tag.
 ```
 <body ng-app="myApp" ><!--Accessing App module in body tag-->
 ```
+
+2. Then create and link a js file which will include the Controller and Services for your angularJs app
+```
+<script src="app.js"></script>
+```
+
 
 ### Prerequisites:
 
