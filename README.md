@@ -5,9 +5,9 @@ AngularJS is a JavaScript-based open-source front-end web application framework 
 
 ## How to understand and follow the notes:
 
- In this notes I have mainly focused on the pratical aspects of AngularJs, And for the same I will suggest you to have a google along with you to clear your therotical doubts on the way.
+ In this notes, I have mainly focused on the practical aspects of AngularJs, And for the same, I will suggest you to have a google along with you to clear your theoretical doubts on the way.
 
- To learn AngularJs from this notes just follow the exercises given in the notes and try to implement them for better understanding
+ To learn AngularJs from these notes just follow the exercises given in the notes and try to implement them for better understanding
 
 
 ## Getting Started:
@@ -23,7 +23,7 @@ AngularJS is a JavaScript-based open-source front-end web application framework 
 
 ### Prerequisites:
 
- For getting started with the AngularJs firt you need to link the AngularJs CDN or offline file in your page:
+ For getting started with the AngularJs first you need to link the AngularJs CDN or offline file in your page:
 
 ```
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
@@ -69,7 +69,7 @@ Try this yourself or see the implementation by running the index.html file provi
 
 ### Third Exercise:
 
-Using $rootScope to access variable from different controller's of app.js
+Using $rootScope to access the variable from different controller's of app.js
 
 Write the follwing in index.html file:
 ```
@@ -165,7 +165,7 @@ Write the follwing in index.html file:
 
 ### Seventh Exercise:
 
-Use ng-show to show any html context upon user action
+Use ng-show to show any HTML context upon user action
 
 Write the follwing in index.html file:
 ```
@@ -300,13 +300,13 @@ Write the follwing in index.html file:
 
 ### Data Binding In AngularJs:
 
-Data binding in angular JS is the synchronization between the model and view: 
+Data binding in Angular JS is the synchronization between the model and view: 
 
 Two types of Data binding:-
 
--one way data binding -> model is the single source of truth . whatever happens on UI triggers a message to model to update a part of data. So data flows in single direction and which becomes easy to understand.
+-one way data binding -> model is the single source of truth. whatever happens on UI triggers a message to model to update a part of data. So data flow in a single direction and which becomes easy to understand.
 
--two way data binding -> any change in UI field updates the model and any change in model updates the UI field.	
+-Two way data binding -> any change in UI field updates the model and any change in model updates the UI field.	
 
 
 ### Tenth Exercise:
@@ -331,7 +331,7 @@ Two way data binding:
 ```
 
 
-### Twelth Exercise:
+### Twelfth Exercise:
 
 
 Creating Custom Directive in AngularJs:
@@ -467,7 +467,7 @@ app.controller("myController4",function($scope){
 
 ### Routing in AngularJs:
 
-Routing in AngularJs is used to show the different contents on same page without refresh/reloading the page.
+Routing in AngularJs is used to show the different contents on the same page without refresh/reload the page.
 
  To make your applications ready for routing, you must include the AngularJS Route module:
 ```
@@ -542,7 +542,7 @@ In this way you can access the constant service in view through controller
 
 
 -3.Service custom service in Angular Js:-
-By default the service has an this object which it returns where as in factory custom service you need to create and return the object
+By default, the service has this object which it returns whereas in factory custom service you need to create and return the object
  
  for ex:
 ```
@@ -563,7 +563,7 @@ By default the service has an this object which it returns where as in factory c
 ```
  In view simply write {{name}}
 
-In this way you can access the service in the view through controller
+In this way, you can access the service in the view through the controller
 
 
 
@@ -597,7 +597,7 @@ app.controller("myController5",function($scope,$timeout){
 
 $http is an AngularJS service for reading data from remote servers.
 
-The AngularJS $http service makes a request to the server, and returns a response.
+The AngularJS $http service makes a request to the server and returns a response.
 
 ```
 app.controller('myController', function($scope, $http) {
@@ -741,7 +741,7 @@ input.ng-valid{
 ```
 
 
-### Referance links for understanding the AngularJs integration with Codeigniter/ Database:
+### Reference links for understanding the AngularJs integration with Codeigniter/ Database:
 
 ```
 https://www.formget.com/angularjs-crud/
@@ -758,3 +758,4 @@ https://forum.codeigniter.com/archive/index.php?thread-10065.html
 
 * [Linkedin](https://www.linkedin.com/in/ajinkya-bodade/)
 * [Portfolio](https://ajinkyabodade.tk/)
+
