@@ -1,0 +1,690 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+	<script src="app.js"></script>
+	<script src="ngStorage.js"></script>
+</head>
+<body ng-app="myApp" ><!--Accessing App module in body tag-->
+
+
+
+<!--First Exercise-->
+<p>First Exercise</p>
+<!--Inputting and Displaying the value-->
+<div >
+	<p>Enter your name: <input type="text" ng-model="name"></p>
+	<p>Hello <span ng-bind="name"></span></p>
+</div>
+
+
+
+<!--Second Exercise-->
+<br><br><br><p>Second Exercise</p>
+
+<!--Fetching name from controller app.js myController Using $Scope-->
+<h1 ng-controller="myController">{{name}}</h1>
+
+
+
+
+<!--Third Exercise-->
+<br><br><br><p>Third Exercise</p>
+
+<!--Using $rootScope to access variable from different controller's of app.js-->
+<div ng-controller="myController1"> 
+	{{name}}<br>
+	{{msg2}}
+</div>
+<div ng-controller="myController2"> 
+	{{name}}<br>
+	{{msg1}}
+</div>
+
+
+<!--Fourth Exercise-->
+<br><br><br><p>Fourth Exercise</p>
+<!--Initializing default variable values using ng-init-->
+<div ng-init="dname='alkesh'; id=101">
+<p>Enter your name:<input type="text" ng-model="dname"></p>
+</div>
+
+
+
+<!--Fifth Exercise-->
+<br><br><br><p>Fifth Exercise</p>
+<!--Using ng-repeat to implement for loop in HTML-->
+<div ng-init="ename=['Ajinkya','Vivek','Anand','Ankit','Vaibhav'];">
+<ul>
+<li ng-repeat="x in ename"> {{x}} </li>
+</ul>
+</div>
+
+<div ng-init="users=[
+{gname:'Ajinkya',contact:'123',city:'buldana'},
+{gname:'Anand',contact:'345',city:'buldana'},
+{gname:'Ankit',contact:'678',city:'buldana'}
+]">
+<table>
+<tr>
+		<td>Name </td>
+		<td>Contact</td>
+		<td>City</td>
+</tr>
+<tr ng-repeat="x in users"> 
+		<td>{{x.gname}} </td>
+		<td>{{x.contact}}</td>
+		<td>{{x.city}}</td>
+</tr>
+</table>
+</div>
+
+
+
+
+<!--Sixth Exercise-->
+<br><br><br><p>Sixth Exercise</p>
+<!--Use ng-hide to hide any html context upon user action-->
+
+<p>Hide Checkbox: <input type="checkbox" ng-model="hide"></p>
+
+<div ng-hide="hide">
+	<h1>This text will get hide</h1>
+</div>
+
+
+
+
+<!--Seventh Exercise-->
+<br><br><br><p>Seventh Exercise</p>
+<!--Use ng-show to show any html context upon user action-->
+
+<p>Hide Checkbox: <input type="checkbox" ng-model="show"></p>
+
+<div ng-show="show">
+	<h1>This text will get hide</h1>
+</div>
+
+
+
+
+<!--Eight Exercise-->
+<br><br><br><p>Eight Exercise</p>
+<!--Expressions in AngularJs-->
+
+
+<div ng-init="hname='Ajinkya'; surname='Bodade'; first=10; second=2; eename={firstname:'Ajinkya',lastname:'Vaibhav'}; points=[1,5,6,7,5]; ">
+	<p>Multiplication:{{first*second}}</p>
+	<p>String Concadination:{{hname+""+surname}}</p>
+	<p>Using Object:{{eename.firstname}}</p>
+	<p>Using Array:{{points[4]}}</p>
+</div>
+
+
+
+
+<!--Nineth Exercise-->
+<br><br><br><p>Nineth Exercise</p>
+<!--Filters in AngularJs-->
+
+<!--
+currency:	 Format a number to a currency format.
+date: 	Format a date to a specified format.
+filter: 	Select a subset of items from an array.
+json:	 Format an object to a JSON string.
+limitTo: 	Limits an array/string, into a specified number of elements/characters.
+lowercase:	 Format a string to lower case.
+number:	 Format a number to a string.
+orderBy:	 Orders an array by an expression.
+uppercase:	 Format a string to upper case.-->
+
+     <div >
+	<p>Enter your name: <input type="text" ng-model="ffname"></p>
+	<p>Uppercase Filter:{{ffname|uppercase}}</p>
+	<p>Lowercase Filter:{{ffname|lowercase}}</p>
+     <br><br>
+
+
+	<p>Enter Price: <input type="text" ng-model="price"></p>
+	<p>Currency Filter:{{price|currency}}</p>
+	<p>{{price|currency:'RS'}}</p>
+     <br><br>
+
+	<p>Enter Date: <input type="date" ng-model="datevalue"></p>
+	<p>Date Filter:{{datevalue|date:'yyyy-MM-dd'}}</p>
+	<p>{{datevalue|date:'fullDate'}}</p>
+	 <br><br>
+
+	<p>Enter Float: <input type="text" ng-model="numberv"></p>
+	<p>Number Filter:{{numberv|number:'3'}}</p>
+	 
+     
+
+
+     <br><br><br><p>Orderby Filter:</p>
+     <div ng-init="userss=[
+	  {gname:'Zoro',contact:'123',city:'buldana'},
+	  {gname:'Bhagyashri',contact:'345',city:'buldana'},
+	  {gname:'Ajinkya',contact:'678',city:'buldana'}
+	  ]">
+	  <table>
+	  <tr>
+			<td>Name </td>
+			<td>Contact</td>
+			<td>City</td>
+	  </tr>
+	  <tr ng-repeat="x in userss|orderBy:'gname'"> <!--Use :'true'  for desending-->
+
+				<td>{{x.gname}} </td>
+			<td>{{x.contact}}</td>
+			<td>{{x.city}}</td>
+	  </tr>
+	  </table>
+	   </div>
+
+
+
+
+
+
+	  <br><br><br><p> Filter Output:</p>
+      <div ng-init="userss=[
+	  {gname:'Zoro',contact:'123',city:'buldana'},
+	  {gname:'Bhagyashri',contact:'345',city:'buldana'},
+	  {gname:'Ajinkya',contact:'678',city:'buldana'}
+	  ]">
+	  <table>
+	  <tr>
+			<td>Name </td>
+			<td>Contact</td>
+			<td>City</td>
+	  </tr>
+	  <tr ng-repeat="x in userss|filter:'z'"> 
+
+			<td>{{x.gname}} </td>
+			<td>{{x.contact}}</td>
+			<td>{{x.city}}</td>
+	  </tr>
+	  </table>
+	   </div>
+
+
+
+
+	   <br><br><br><p> LimitTo Filter:</p>
+      <div ng-init="userss=[
+	  {gname:'Zoro',contact:'123',city:'buldana'},
+	  {gname:'Bhagyashri',contact:'345',city:'buldana'},
+	  {gname:'Ajinkya',contact:'678',city:'buldana'}
+	  ]">
+	  <table>
+	  <tr>
+			<td>Name </td>
+			<td>Contact</td>
+			<td>City</td>
+	  </tr>
+	  <tr ng-repeat="x in userss|limitTo:'2'"> 
+
+			<td>{{x.gname}} </td>
+			<td>{{x.contact}}</td>
+			<td>{{x.city}}</td>
+	  </tr>
+	  </table>
+	   </div>
+
+
+
+<!--Notes-->
+<br><br><br><p>*Data binding in angular JS is the synchronization between the model and view: </p>
+
+<p>Two types of Data binding:- </p>
+<pre>
+*one way data binding -> model is the single source of truth . whatever happens on UI triggers a message to model to update a part of data. So data flows in single direction and which becomes easy to understand.
+
+*two way data binding -> any change in UI field updates the model and any change in model updates the UI field.	
+</pre>
+
+
+
+<!--Tenth Exercise-->
+<br><br><br><p>Tenth Exercise</p>
+<!--one way data binding:-->
+<div ng-controller="myController" >
+	<p>one way data binding: <input type="text" ng-model="name"></p>
+	<!-- When you update values in model then values is views will change and the vice verca will not happen-->
+</div>
+
+
+
+<!--Eleventh Exercise-->
+<br><br><br><p>Eleventh Exercise</p>
+<!--one way data binding:-->
+<div ng-controller="myController" >
+	<p>Two way data binding: <input type="text" ng-model="name"></p>
+	<p>{{name}}</p>
+	<!-- When you update values in model then values is views will change and the vice verca will also happen-->
+</div>
+
+
+
+
+
+<!--Twelth Exercise-->
+<br><br><br><p>Twelth Exercise</p>
+<!--Accesing Custom Directive of app.js in View:-->
+<!--First Method   as a Tag-->
+<my-first-directive></my-first-directive>
+<!--Second Method   as a Attribute-->
+<div my-first-directive></div><!--If you dont write restrict in directive defination then by default only first two methods will work-->
+<!--Third Method   as a Class-->
+<div class="my-first-directive"></div>
+<!--Fourth Method   as a Comment          only work if you write replace:true; in directive-->
+<!-- directive:my-first-directive -->
+
+
+<!--Thirteenth Exercise-->
+<br><br><br><p>Thirteenth Exercise</p>
+<!--Creating Custom Filters in AngularJs-->
+<div ng-controller="myController3" >
+	<table>
+	  <tr>
+			<td>Name </td>
+			<td>Contact</td>
+			<td>Gender</td>
+	  </tr>
+	  <tr ng-repeat="x in userss"> 
+
+			<td>{{x.gname}} </td>
+			<td>{{x.contact}}</td>
+			<td>{{x.gender|converter}}</td><!--Using Custom Filter-->
+	  </tr>
+	  </table>
+
+</div>
+
+
+
+<!--Notes: To Manually(Boostrap) start the angular app use the following script:
+<script>
+angular.element(document).ready(function() {
+	angular.bootstrap(document, ['myApp']);
+});
+</script>
+-->
+
+
+
+
+<!--14th Exercise-->
+<br><br><br><p>14th Exercise</p>
+<!--Events in AngularJs 
+ng-change
+ng-blur
+ng-click
+ng-copy
+ng-cut
+ng-dblclick
+ng-focus
+ng-keydown
+ng-keypress
+ng-keyup
+ng-mousedown
+ng-mouseenter
+ng-mouseleave
+ng-mousemove
+ng-mouseover
+ng-mouseup
+ng-paste
+-->
+<!-- Ng-click Event-->
+<div ng-controller="myController4">
+<h1>Ng-click event</h1>
+<input type="button" ng-click="test()" value="Click Me">
+<br>
+{{count}}
+</div>
+
+
+<!-- Ng-change Event-->
+<div ng-controller="myController4">
+<h1>Ng-Change event</h1>
+<input type="text" ng-change="test()" ng-model="txtValue" >
+<br>
+{{count}}
+</div>
+
+
+<!-- Ng-mouseover Event-->
+<div ng-controller="myController4">
+<h1>Ng-mouseover event</h1>
+<h2 ng-mouseover="test()">Mouse over me</h2>
+ <p>Mouse moved
+<br>
+{{count}}
+</div>
+
+
+
+<!-- Use of $watch function to watch changes in another variables -->
+<!--  app.controller("myController",function($scope){
+
+	$scope.count=0;
+	$scope.$watch("variable_name_to_watch",function(newValue,oldVale)
+	{
+		$scope.count++;
+	}
+	
+}); -->
+
+
+
+<!-- We use $digest function to .....let know the AngularJs that the variable value has changed by an javascript function(in realtime fetching)
+
+	use $scope.$digest();    in javascript function
+-->
+
+
+
+<!--  $apply work same as digest the only addition is: we can define function in $scope.$apply();
+	as:
+
+	$scope.$apply(function(){
+	
+$scope.name="Learn Vern";
+
+	});
+-->
+
+
+
+
+
+
+<!-- Routing in AngularJs
+
+Routing in AngularJs is used to show the different contents on same page without refresh/reloading the page.
+
+
+
+** To make your applications ready for routing, you must include the AngularJS Route module:
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+
+
+**Write the following code in app.js
+
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/login", {
+        templateUrl : "main.htm"
+    })
+    .when("/register", {
+        templateUrl : "london.htm"
+    })
+    .otherwise({
+        template : "<h1>Hello this is default template  </h1>"
+    });
+});
+
+
+
+**Write the following  in View:
+
+To call the login/register:
+<a href="#login">Login</a>
+<a href="#Register">Register</a>
+
+To show the content in any div or elemnt in view:
+<div ng-view></div>
+
+ -->
+
+
+
+
+
+
+
+<!-- Services in AngularJs
+
+**In AngularJS, a service is a function, or object, that is available for, and limited to, your AngularJS application.
+
+AngularJS has about 30 built-in services, and we can create custom service also.
+
+***Custom services in Angularjs--
+
+**Value Custom service in AngularJs:-
+Write the following code in app.js:
+app.value("variable_name","Value");
+
+for ex:-
+app.value("pi","3.141");
+
+app.controller("myController",function($scope,pi){
+	$scope.name=pi;
+	}); 
+
+//In this way you can access the value service in view through controller
+
+
+
+
+**Constant custom service in AngularJs:-
+ Write the following in spp.js:
+app.constant("variable_name","Value");
+
+for ex:-
+app.constant("webname","Portfolio of Ajinkya");
+
+app.controller("myController",function($scope,webname){
+	$scope.name=ebname;
+	}); 
+
+//In this way you can access the constant service in view through controller
+
+
+
+**Service custom service in Angular Js:-
+//By default the service has an this object which it returns where as in factory custom service you need to create and return the object
+ 
+ for ex:-
+
+ app.service("myService",function(){
+	//var this={};
+		this.getname=function(){
+	
+	return "this is service service";
+		}	
+
+	//return this;
+	});
+
+ 
+ app.controller("myController",function($scope,myService){
+	$scope.name=myService.getname();
+	});
+
+//In view simply write {{name}}
+
+//In this way you can access the service in the view through controller
+
+
+
+
+***Inbuilt Services in AngularJs:-
+
+**Timeout Service:-
+ -->
+<!--15th Exercise-->
+<br><br><br><p>15th Exercise</p>
+<!--Timeout Service:-->
+<!-- Used to change content after specific amount of time -->
+<div ng-controller="myController5" >
+	<p>Timeout Service:</p>
+	<p>{{msg}}</p>
+	</div>
+
+<!-- 
+**$http service:-
+app.controller('myController', function($scope, $http) {
+    $http({
+        method : "GET",
+        url : "welcome.htm"
+    }).then(function mySuccess(response) {
+        $scope.myData = response.data;
+
+    }, 
+
+    function myError(response) {
+        $scope.myData = response.statusText;
+    });
+});
+
+//shortcut method for get
+
+app.controller('myController', function($scope, $http) {
+    $http.get("welcome.htm")
+
+    .then(function(response) {
+        $scope.myData = response.data;
+    });
+});
+
+
+
+**Interval Service:-
+ -->
+<!--16th Exercise-->
+<br><br><br><p>16th Exercise</p>
+<!--Timeout Service:-->
+<!-- Used to change content after equal interval of time-->
+<div ng-controller="myController6" >
+	<p>Interval Service:</p>
+	<p>{{count}}</p>
+	</div>
+
+
+
+
+<!-- 
+**Log Service:- 
+ Used to show message in console
+ see controller7 in app.js for syntax -->
+
+
+
+<!--
+**location Service:-
+ -->
+<!--17th Exercise-->
+<br><br><br><p>17th Exercise</p>
+<!--location Service:-->
+<!-- Used to get various information from server-->
+<div ng-controller="myController8" >
+	<p>location Service:</p>
+	<p>curl:{{curl}}</p>
+	<p>host:{{host}}</p>
+	<p>port:{{port}}</p>
+	<p>protocol:{{protocol}}</p>
+	</div>
+
+
+
+
+<!-- Form state in AngularJs -->
+<br><br><br><p>18th Exercise</p>
+<form name="myForm0">
+<input type="email" name="myInput0" ng-model="myInput0">
+</form>
+<p>The Email valid state is:</p>
+<h1>{{myForm0.myInput0.$valid}}</h1>
+<!-- some other example are $touched $untouched $dirty etc -->
+ 
+
+<!-- Form Validation Directive in AngularJs -->
+<br><br><br><p>19th Exercise</p>
+<form name="myForm1">
+Name:<input type="name" name="myInput1" ng-model="myInput1" required ng-pattern="/[a-zA-Z]{2,10}/">
+<span ng-show="myForm1.myInput1.$touched">
+<span ng-show="myForm1.myInput1.$error.required" style="color:red;">Please fill thid field</span>
+<span ng-show="myForm1.myInput1.$error.pattern" style="color:red;">Name is not valid</span>
+</span>
+
+<br>Email:<input type="email" name="myInput2" ng-model="myInput2" required ng-pattern="/[a-zA-Z]{2,10}/">
+<span ng-show="myForm1.myInput2.$touched">
+<span ng-show="myForm1.myInput2.$error.required" style="color:red;">Please fill thid field</span>
+<span ng-show="myForm1.myInput2.$error.email" style="color:red;">Email is not valid</span>
+</span>
+</form>
+
+
+
+<!-- CSS class for validation in AngularJs -->
+<style>
+input.ng-touched{
+	background-color:red;
+}
+input.ng-valid{
+	background-color:lightgreen;
+}
+</style>
+
+
+
+
+
+<!-- Session in Angular ----not working for me -->
+<br><br><br><p>20th Exercise</p>
+<form name="myForm2" ng-controller="myController9">
+<input type="button" ng-click="add()" value="Add Session">
+<input type="button" ng-click="fetch()" value="View Session">
+</form>
+
+</body>
+</html>
+
+
+<!-- Referance links for understanding the AngularJs integration with Codeigniter/ Database  
+
+https://www.formget.com/angularjs-crud/
+https://www.w3schools.com/angular/angular_sql.asp
+https://stackoverflow.com/questions/37722797/insert-data-into-database-in-angularjs
+https://stackoverflow.com/questions/39410618/codeigniter-post-data-using-angularjs
+https://forum.codeigniter.com/archive/index.php?thread-13661.html
+https://stackoverflow.com/questions/47765693/warning-message-illegal-offset-type-from-where-function-mysql-php?rq=1
+https://forum.codeigniter.com/archive/index.php?thread-10065.html
+-->
+
+
+
+<!-- 
+Use the following code in index.php of codeigniter to get data from AngularJs using POST method
+
+public function setUpInput()
+        {
+            if (!$_POST || (version_compare(PHP_VERSION, '5.6') >= 0 && isset($_SERVER["CONTENT_TYPE"]) && $_SERVER["CONTENT_TYPE"]=='application/x-www-form-urlencoded' )) {
+                $_POST = json_decode(file_get_contents("php://input"), true);
+                if($_POST===NULL) parse_str(file_get_contents("php://input"), $_POST);
+                $_POST = _arrayurldecode($_POST);
+            }
+        }
+
+function _arrayurldecode($ar)
+        {
+            if(!is_array($ar) || empty($ar))
+              return $ar;
+            $temp = array();
+            foreach ($ar as $key => $value) {
+               if(is_string($value) && strpos($value,"+")===false){
+                 $temp[$key] = urldecode($value);
+               }
+               elseif (is_array($value)) {
+                 $temp[$key] = arrayurldecode($value);
+               }
+               else $temp[$key] = $value;
+            }
+            return $temp;
+        }
+
+ -->
