@@ -760,5 +760,5 @@ https://forum.codeigniter.com/archive/index.php?thread-10065.html
 ## Links To My profiles:
 
 * [Linkedin](https://www.linkedin.com/in/ajinkya-bodade/)
-* [Portfolio](https://ajinkyabodade.tk/)
+* [Portfolio](https://ajinkyabodade.com/)
 
