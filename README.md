@@ -1,47 +1,63 @@
-Angular Js Notes By Ajinkya
-Visit my github profile for source code and demo:- https://github.com/ajinkyabodade/AngularJs-Notes
+# Angular Js Notes By Ajinkya
 
 AngularJS is a JavaScript-based open-source front-end web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.
 
 
-How to understand and follow the notes:
-In this notes, I have mainly focused on the practical aspects of AngularJs, And for the same, I will suggest you to have a google along with you to clear your theoretical doubts on the way.
+## How to understand and follow the notes:
 
-To learn AngularJs from these notes just follow the exercises given in the notes and try to implement them for better understanding
+ In this notes, I have mainly focused on the practical aspects of AngularJs, And for the same, I will suggest you to have a google along with you to clear your theoretical doubts on the way.
 
+ To learn AngularJs from these notes just follow the exercises given in the notes and try to implement them for better understanding
 
-Getting Started:
-To start using AngularJs use ng-app="app_name" in your desired html tag.
-<body ng-app="myApp" ><!--Accessing App module in body tag--
+ You must practice the below Exercise otherwise you will not understand the AngularJs.
+
+## Getting Started:
+
+1. To start using AngularJs use ng-app="app_name" in your desired html tag.
+```
+<body ng-app="myApp" ><!--Accessing App module in body tag-->
+```
+
 2. Then create and link a js file which will include the Controller and Services for your angularJs app
-
+```
 <script src="app.js"></script>
+```
 
-Prerequisites:
-For getting started with the AngularJs first you need to link the AngularJs CDN or offline file in your page:
 
+### Prerequisites:
+
+ For getting started with the AngularJs first you need to link the AngularJs CDN or offline file in your page:
+
+```
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+```
 You can get the CDN link or file from https://angularjs.org/
 
 
-First Exercise:
+### First Exercise:
+
 Inputting and Displaying the values
 
+```
 <div >
 	<p>Enter your name: <input type="text" ng-model="name"></p>
 	<p>Hello <span ng-bind="name"></span></p>
 </div>
-Try this yourself or see the implementation by running the index.html file provided by me.
+```
+Try this yourself or see the implementation by running the index.html file provided by me. 
+ 
 
+### Second Exercise:
 
-Second Exercise:
 Fetching name from controller app.js myController Using $Scope
 
 Write the following in index.html file:
-
+```
 <h1 ng-controller="myController">{{name}}</h1>
+```
 In app.js create the controller as follows:
 
+```
 var app= angular.module("myApp",[]);
 
 app.controller("myController",function($scope){
@@ -50,14 +66,16 @@ app.controller("myController",function($scope){
 	$scope.designation="AngulaJs Developer";
 
 }); 
+``` 
 Try this yourself or see the implementation by running the index.html file provided by me.(store app.js in the same location as index.html )
 
 
-Third Exercise:
+### Third Exercise:
+
 Using $rootScope to access the variable from different controller's of app.js
 
 Write the following in index.html file:
-
+```
 <div ng-controller="myController1"> 
 	{{name}}<br>
 	{{msg2}}
@@ -66,8 +84,9 @@ Write the following in index.html file:
 	{{name}}<br>
 	{{msg1}}
 </div>
+```
 Write the following in app.js
-
+```
 app.controller("myController1",function($scope,$rootScope){
 
 	$scope.name="This is 1st Controller";
@@ -85,28 +104,38 @@ app.controller("myController2",function($scope,$rootScope){
 	
 
 }); 
+```
 
-Fourth Exercise:
+
+### Fourth Exercise:
+
 Initializing default variable values using ng-init
 
 Write the following in index.html file:
-
+```
 <div ng-init="dname='alkesh';">
 <p>Enter your name:<input type="text" ng-model="dname"></p>
 </div>
+```
 
-Fifth Exercise:
+
+### Fifth Exercise:
+
 Using ng-repeat to implement for loop in HTML
 
-Write the follwing in index.html file:
-
+Write the following in index.html file:
+```
 <div ng-init="ename=['Ajinkya','Vivek','Anand','Ankit','Vaibhav'];">
 	<ul>
 	<li ng-repeat="x in ename"> {{x}} </li>
 	</ul>
 </div>
 
-<div ng-init="users=[ {gname:'Ajinkya',contact:'123',city:'buldana'}, {gname:'Anand',contact:'345',city:'buldana'}, {gname:'Ankit',contact:'678',city:'buldana'} ]">
+<div ng-init="users=[
+	{gname:'Ajinkya',contact:'123',city:'buldana'},
+	{gname:'Anand',contact:'345',city:'buldana'},
+	{gname:'Ankit',contact:'678',city:'buldana'}
+	]">
 	<table>
 		<tr>
 				<td>Name </td>
@@ -121,35 +150,44 @@ Write the follwing in index.html file:
 	</table>
 </div>
 
+```
 
-Sixth Exercise:
+### Sixth Exercise:
+
 Use ng-hide to hide any html context upon user action
 
 Write the following in index.html file:
-
+```
 <p>Hide Checkbox: <input type="checkbox" ng-model="hide"></p>
 
 <div ng-hide="hide">
 	<h1>This text will get hide</h1>
 </div>
+```
 
-Seventh Exercise:
+
+### Seventh Exercise:
+
 Use ng-show to show any HTML context upon user action
 
 Write the following in index.html file:
-
+```
 <p>Hide Checkbox: <input type="checkbox" ng-model="show"></p>
 
 <div ng-show="show">
 	<h1>This text will get hide</h1>
 </div>
 
+```
 
-Eight Exercise:
+
+
+### Eight Exercise:
+
 Expressions in AngularJs
 
-Write the follwing in index.html file:
-
+Write the following in index.html file:
+```
 <div ng-init="hname='Ajinkya'; surname='Bodade'; first=10; second=2; eename={firstname:'Ajinkya',lastname:'Vaibhav'}; points=[1,5,6,7,5]; ">
 	<p>Multiplication:{{first*second}}</p>
 	<p>String Concadination:{{hname+""+surname}}</p>
@@ -158,10 +196,12 @@ Write the follwing in index.html file:
 </div>
 
 
+```
 
-Ninth Exercise:
+### Nineth Exercise:
+
 Filters in AngularJs
-
+```
 currency:	 Format a number to a currency format.
 date: 	Format a date to a specified format.
 filter: 	Select a subset of items from an array.
@@ -171,17 +211,20 @@ lowercase:	 Format a string to lower case.
 number:	 Format a number to a string.
 orderBy:	 Orders an array by an expression.
 uppercase:	 Format a string to upper case.
+```
 Write the following in index.html file:
-
+```
  <div >
 	<p>Enter your name: <input type="text" ng-model="ffname"></p>
 	<p>Uppercase Filter:{{ffname|uppercase}}</p>
-	<p>Lowercase Filter:{{ffname|lowercase}}</p><br><br>
+	<p>Lowercase Filter:{{ffname|lowercase}}</p>
+     <br><br>
 
 
 	<p>Enter Price: <input type="text" ng-model="price"></p>
 	<p>Currency Filter:{{price|currency}}</p>
-	<p>{{price|currency:'RS'}}</p><br><br>
+	<p>{{price|currency:'RS'}}</p>
+     <br><br>
 
 	<p>Enter Date: <input type="date" ng-model="datevalue"></p>
 	<p>Date Filter:{{datevalue|date:'yyyy-MM-dd'}}</p>
@@ -192,7 +235,12 @@ Write the following in index.html file:
 	<p>Number Filter:{{numberv|number:'3'}}</p>
 	 
      
-     <p>Orderby Filter:</p><div ng-init="userss=[ {gname:'Zoro',contact:'123',city:'buldana'}, {gname:'Bhagyashri',contact:'345',city:'buldana'}, {gname:'Ajinkya',contact:'678',city:'buldana'} ]">
+     <p>Orderby Filter:</p>
+     <div ng-init="userss=[
+	  {gname:'Zoro',contact:'123',city:'buldana'},
+	  {gname:'Bhagyashri',contact:'345',city:'buldana'},
+	  {gname:'Ajinkya',contact:'678',city:'buldana'}
+	  ]">
 	  <table>
 	  <tr>
 			<td>Name </td>
@@ -209,7 +257,12 @@ Write the following in index.html file:
 	   </div>
 
 
-	 <p> Filter Output:</p><div ng-init="userss=[ {gname:'Zoro',contact:'123',city:'buldana'}, {gname:'Bhagyashri',contact:'345',city:'buldana'}, {gname:'Ajinkya',contact:'678',city:'buldana'} ]">
+	 <p> Filter Output:</p>
+      <div ng-init="userss=[
+	  {gname:'Zoro',contact:'123',city:'buldana'},
+	  {gname:'Bhagyashri',contact:'345',city:'buldana'},
+	  {gname:'Ajinkya',contact:'678',city:'buldana'}
+	  ]">
 	  <table>
 	  <tr>
 			<td>Name </td>
@@ -225,7 +278,12 @@ Write the following in index.html file:
 	  </table>
 	   </div>
 
-     <p> LimitTo Filter:</p><div ng-init="userss=[ {gname:'Zoro',contact:'123',city:'buldana'}, {gname:'Bhagyashri',contact:'345',city:'buldana'}, {gname:'Ajinkya',contact:'678',city:'buldana'} ]">
+     <p> LimitTo Filter:</p>
+      <div ng-init="userss=[
+	  {gname:'Zoro',contact:'123',city:'buldana'},
+	  {gname:'Bhagyashri',contact:'345',city:'buldana'},
+	  {gname:'Ajinkya',contact:'678',city:'buldana'}
+	  ]">
 	  <table>
 	  <tr>
 			<td>Name </td>
@@ -241,37 +299,46 @@ Write the following in index.html file:
 	  </table>
 	   </div>
 
+```
 
-Data Binding In AngularJs:
-Data binding in Angular JS is the synchronization between the model and view:
+### Data Binding In AngularJs:
+
+Data binding in Angular JS is the synchronization between the model and view: 
 
 Two types of Data binding:-
 
 -one way data binding -> model is the single source of truth. whatever happens on UI triggers a message to model to update a part of data. So data flow in a single direction and which becomes easy to understand.
 
--Two way data binding -> any change in UI field updates the model and any change in model updates the UI field.
+-Two way data binding -> any change in UI field updates the model and any change in model updates the UI field.	
 
 
-Tenth Exercise:
-One way data-binding:
+### Tenth Exercise:
 
+One way data binding:
+```
 <div ng-controller="myController" >
 	<p>one way data binding: <input type="text" ng-model="name"></p>
 	<!-- When you update values in model then values is views will change and the vice verca will not happen-->
 </div>
+```
 
-Eleventh Exercise:
-Two way data-binding:
+### Eleventh Exercise:
 
+Two way data binding:
+```
 <div ng-controller="myController" >
 	<p>Two way data binding: <input type="text" ng-model="name"></p>
 	<p>{{name}}</p>
 	<!-- When you update values in model then values is views will change and the vice verca will also happen-->
 </div>
+```
 
-Twelfth Exercise:
+
+### Twelfth Exercise:
+
+
 Creating Custom Directive in AngularJs:
-
+```
 // Custom Directive in AngularJs 
 
 app.directive("myFirstDirective", function(){//name should be in camel case
@@ -282,8 +349,10 @@ template:"<h1>Ajinkya Bodade</h1>"
 
 });
 
-Accessing Custom Directive of app.js in View::
+```
 
+Accesing Custom Directive of app.js in View::
+```
 <!--First Method as a Tag-->
 <my-first-directive></my-first-directive>
 
@@ -295,12 +364,14 @@ Accessing Custom Directive of app.js in View::
 
 <!--Fourth Method as a Comment only work if you write replace:true; in directive-->
 <!-- directive:my-first-directive -->
+```
 
-Thirteenth Exercise:
+### Thirteenth Exercise:
+
 Creating Custom Filters in AngularJs:
 
 Write the following in html file:
-
+```
 <div ng-controller="myController3" >
 	<table>
 	  <tr>
@@ -317,8 +388,10 @@ Write the following in html file:
 	  </table>
 
 </div>
-Write the following in Js file:
+```
 
+Write the following in Js file:
+```
 app.controller("myController3",function($scope,$rootScope){
 
 	$scope.userss=[
@@ -326,38 +399,39 @@ app.controller("myController3",function($scope,$rootScope){
 	  {gname:'Bhagyashri',contact:'345',gender:2},
 	  {gname:'Ajinkya',contact:'678',gender:3}
 	  ];
-
 app.filter('converter', function(){
    return functio(input){
      if(input==1) return ("Male");
      else if(input==2) return ("Female");
      else if(input==3) return ("Not Disclosed");
    }
-	
 }); 
+```
 
-14th Exercise:
+### 14th Exercise:
+
 Events in AngularJs:
 
-     -ng-change
-     -ng-blur
-     -ng-click
-     -ng-copy
-     -ng-cut
-     -ng-dblclick
-     -ng-focus
-     -ng-keydown
-     -ng-keypress
-     -ng-keyup
-     -ng-mousedown
-     -ng-mouseenter
-     -ng-mouseleave
-     -ng-mousemove
-     -ng-mouseover
-     -ng-mouseup
-     -ng-paste
-Write the following in html file:
+         -ng-change
+         -ng-blur
+         -ng-click
+         -ng-copy
+         -ng-cut
+         -ng-dblclick
+         -ng-focus
+         -ng-keydown
+         -ng-keypress
+         -ng-keyup
+         -ng-mousedown
+         -ng-mouseenter
+         -ng-mouseleave
+         -ng-mousemove
+         -ng-mouseover
+         -ng-mouseup
+         -ng-paste
 
+Write the following in html file:
+```
 <!-- Ng-click Event-->
 <div ng-controller="myController4">
 <h1>Ng-click event</h1>
@@ -379,12 +453,14 @@ Write the following in html file:
 <!-- Ng-mouseover Event-->
 <div ng-controller="myController4">
 <h1>Ng-mouseover event</h1>
-<h2 ng-mouseover="test()">Mouse over me</h2><p>Mouse moved
+<h2 ng-mouseover="test()">Mouse over me</h2>
+ <p>Mouse moved
 <br>
 {{count}}
 </div>
+```
 Write the following in app.js:
-
+```
 //for ng-click and ng-change event
 app.controller("myController4",function($scope){
 
@@ -395,15 +471,19 @@ app.controller("myController4",function($scope){
 	}
 	
 }); 
+```
 
-Routing in AngularJs:
+### Routing in AngularJs:
+
 Routing in AngularJs is used to show the different contents on the same page without refresh/reload the page.
 
-To make your applications ready for routing, you must include the AngularJS Route module:
-
+ To make your applications ready for routing, you must include the AngularJS Route module:
+```
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-Write the following code in app.js:
+```
 
+Write the following code in app.js:
+```
 var app = angular.module("myApp", ["ngRoute"]);
 app.config(function($routeProvider) {
     $routeProvider
@@ -417,24 +497,29 @@ app.config(function($routeProvider) {
         template : "<h1>Hello this is default template  </h1>"
     });
 });
-Write the following in View:
-
+```
+Write the following  in View:
+```
 To call the login/register:
 <a href="#login">Login</a>
 <a href="#Register">Register</a>
 
 To show the content in any div or elemnt in view:
 <div ng-view></div>
+```
 
-Services in AngularJs:
+
+### Services in AngularJs:
+
 In AngularJS, a service is a function, or object, that is available for, and limited to, your AngularJS application.
 
 AngularJS has about 30 built-in services, and we can create custom service also.
 
+### Custom services in Angularjs:
 
-Custom services in Angularjs:
--1.Value Custom service in AngularJs:- Write the following code in app.js:
-
+-1.Value Custom service in AngularJs:-
+Write the following code in app.js:
+```
 app.value("variable_name","Value");
 
 for ex:-
@@ -443,24 +528,32 @@ app.value("pi","3.141");
 app.controller("myController",function($scope,pi){
 	$scope.name=pi;
 	}); 
-In this way, you can access the value service in view through controller
+```
+In this way you can access the value service in view through controller
 
--2.Constant custom service in AngularJs:- Write the following in app.js:
 
+
+-2.Constant custom service in AngularJs:-
+ Write the following in app.js:
+ ```
 app.constant("variable_name","Value");
 
 for ex:-
 app.constant("webname","Portfolio of Ajinkya");
 
 app.controller("myController",function($scope,webname){
-   $scope.name=ebname;
-   }); 
-In this way, you can access the constant service in view through the controller
+	$scope.name=ebname;
+	}); 
+```
+In this way you can access the constant service in view through controller
 
--3.Service custom service in Angular Js:- By default, the service has this object which it returns whereas in factory custom service you need to create and return the object
 
-for ex:
 
+-3.Service custom service in Angular Js:-
+By default, the service has this object which it returns whereas in factory custom service you need to create and return the object
+ 
+ for ex:
+```
  app.service("myService",function(){
 	//var this={};
 		this.getname=function(){
@@ -475,23 +568,29 @@ for ex:
  app.controller("myController",function($scope,myService){
 	$scope.name=myService.getname();
 	});
-In view simply write {{name}}
+```
+ In view simply write {{name}}
 
 In this way, you can access the service in the view through the controller
 
 
-Inbuilt services in Angularjs:
+
+
+### Inbuilt services in Angularjs:
+
+
 -1.Timeout Service:-
 
 Write the following in html:
-
+```
 <!-- Used to change content after specific amount of time -->
 <div ng-controller="myController5" >
 	<p>Timeout Service:</p>
 	<p>{{msg}}</p>
 </div>
+```
 Write the following in app.js:
-
+```
 app.controller("myController5",function($scope,$timeout){
 	$scope.msg="Welcome to my site";
 	$timeout(function(){
@@ -499,12 +598,16 @@ app.controller("myController5",function($scope,$timeout){
 	},5000);
 	}); 
 
+```
+
 -2.$http service:-
+
 
 $http is an AngularJS service for reading data from remote servers.
 
 The AngularJS $http service makes a request to the server and returns a response.
 
+```
 app.controller('myController', function($scope, $http) {
     $http({
         method : "GET",
@@ -529,17 +632,20 @@ app.controller('myController', function($scope, $http) {
     });
 });
 
+```
+
 -3.Interval Service:-
 
-Write the following in HTML:
-
+Write the following in html:
+```
 <!-- Used to change content after equal interval of time-->
 <div ng-controller="myController6" >
 	<p>Interval Service:</p>
 	<p>{{count}}</p>
 </div>
+```
 Write the following in app.js
-
+```
 //$interval service 
 app.controller("myController6",function($scope,$interval){
 	$scope.count=0;
@@ -548,8 +654,12 @@ app.controller("myController6",function($scope,$interval){
 	},2000);
 
 	}); 
--4.Log Service:- Used to show message in console see controller7 in app.js for syntax
+```
 
+-4.Log Service:- 
+ Used to show message in console
+ see controller7 in app.js for syntax
+```
 app.controller("myController7",function($log){
 	$log.log('This is log');
 	$log.error('This is error');
@@ -558,10 +668,12 @@ app.controller("myController7",function($log){
 	$log.debug('This is debugging');
 
 	}); 
+```
+
 -5.location Service:
 
 Write the following in html file:
-
+```
 <!--location Service:-->
 <!-- Used to get various information from server-->
 <div ng-controller="myController8" >
@@ -572,20 +684,23 @@ Write the following in html file:
 	<p>protocol:{{protocol}}</p>
 </div>
 
+```
 Write the following in app.js:
-
+```
 app.controller("myController8",function($scope,$location){
 	$scope.curl=$location.absUrl();
 	$scope.protocol=$location.protocol();
 	$scope.port=$location.port();
 	$scope.host=$location.host();
 	}); 
+```
 
-15th Exercise:
+### 15th Exercise:
+
 Form state in AngularJs
 
 Write following in html file:
-
+```
 <form name="myForm0">
 	<input type="email" name="myInput0" ng-model="myInput0">
 </form>
@@ -593,14 +708,18 @@ Write following in html file:
 <p>The Email valid state is:</p>
 <h1>{{myForm0.myInput0.$valid}}</h1>
 
+ ```
 Some other example are $touched $untouched $dirty etc.
 
 
-16th Exercise:
+### 16th Exercise:
+
+
 Form Validation Directive in AngularJs
 
-Write the following in html file:
 
+Write the following in html file:
+```
 <form name="myForm1">
 	Name:<input type="name" name="myInput1" ng-model="myInput1" required ng-pattern="/[a-zA-Z]{2,10}/">
 	<span ng-show="myForm1.myInput1.$touched">
@@ -611,7 +730,8 @@ Write the following in html file:
 	<br>Email:<input type="email" name="myInput2" ng-model="myInput2" required ng-pattern="/[a-zA-Z]{2,10}/">
 	<span ng-show="myForm1.myInput2.$touched">
 		<span ng-show="myForm1.myInput2.$error.required" style="color:red;">Please fill thid field</span>
-		<span ng-show="myForm1.myInput2.$error.email" style="color:red;">Email is not valid</span></span>
+		<span ng-show="myForm1.myInput2.$error.email" style="color:red;">Email is not valid</span>
+    </span>
 </form>
 
 
@@ -626,8 +746,12 @@ input.ng-valid{
 }
 </style>
 
+```
 
-Reference links for understanding the AngularJs integration with Codeigniter/ Database:
+
+### Reference links for understanding the AngularJs integration with Codeigniter/ Database:
+
+```
 https://www.formget.com/angularjs-crud/
 https://www.w3schools.com/angular/angular_sql.asp
 https://stackoverflow.com/questions/37722797/insert-data-into-database-in-angularjs
@@ -635,7 +759,11 @@ https://stackoverflow.com/questions/39410618/codeigniter-post-data-using-angular
 https://forum.codeigniter.com/archive/index.php?thread-13661.html
 https://stackoverflow.com/questions/47765693/warning-message-illegal-offset-type-from-where-function-mysql-php?rq=1
 https://forum.codeigniter.com/archive/index.php?thread-10065.html
+```
 
-Links To My profiles:
-Linkedin
-Portfolio
+
+## Links To My profiles:
+
+* [Linkedin](https://www.linkedin.com/in/ajinkya-bodade/)
+* [Portfolio](https://ajinkyabodade.com/)
+
